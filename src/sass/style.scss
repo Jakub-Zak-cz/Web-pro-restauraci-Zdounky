@@ -1,0 +1,516 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    background: #000;
+    
+}
+
+ .nav-menu {
+     padding-top: 20px;
+     padding-bottom: 30px;
+ }
+
+ 
+.nav__links {
+    text-decoration: none;
+    color: $white;
+    font-size: 16px;
+    margin-left: 70px;
+    @include bold-font;
+    transition: color 0.5s; 
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+.nav__links:hover {
+    color: $gold; /* New color */
+}
+
+.header {
+    background: url("../img/slider1.jpg");
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    padding: 0px;
+    margin: 0px auto;
+    width: 100%;
+    height: 900px;
+    visibility: visible;
+    // position: absolute;
+    overflow: visible;
+    left: 0px;
+}
+
+.header__uptitle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    @include hand-font;
+    font-size: 60px;
+    margin-top: 20%;
+}
+
+.header__title {
+    font-size: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    @include bold-font;
+    color: $white;   
+    margin-top: 5px;
+}
+
+.header-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    @media (max-width: 900px) {
+        margin-top: 220px;
+    }
+}
+
+
+.about {
+    padding: 120px 0;
+}
+
+.about-wrap {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 600px) {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.about-item {
+    width: 46%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.about-picture {
+    width: 46%;
+    @media (max-width: 900px) {
+        margin-top: 140px; 
+    }   
+    @media (max-width: 600px) {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+.about__img {
+    width: 100%;
+}
+
+.about__upheadline {
+    display: block;
+    @include hand-font;
+    font-size: 34px;
+}
+
+.about__headline {
+    font-size: 32px;
+    @include bold-font;
+    margin-top: 0;
+}
+
+.about__text {
+    @include normal-font;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+.pizza {
+    background: url("../img/pizza.avif");
+    height: 100px;
+    padding: 20px 0;
+}
+
+.pizza__title {
+    color: transparent;
+}
+
+.service {
+    padding: 120px 0;
+}
+
+.service__title {
+    @include bold-font;
+    font-size: 62px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 100px;
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+.service__uptitle {
+    @include hand-font;
+    font-size: 34px;
+    text-align: center;
+    display: block;
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}
+
+.service-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    // flex-direction: column;
+}
+
+.service-item {
+    width: 33%;
+    border: 1px solid #D9D9D9;
+    height: 350px;
+    width: 340px;
+    padding: 40px 40px 45px 40px;
+    margin-bottom: 35px;
+    box-shadow: 0px 0px 77px 0px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @media (max-width: 768px) {
+        width: 50%;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.service-item:hover {
+    transition: .2s;
+    box-shadow: 0px 0px 10px 0px $gold;
+}
+
+.service__headline {
+    display: block;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 18px;
+    @include bold-font;
+}
+
+.service__text {
+    @include normal-font;
+    line-height: 28px;
+    font-size: 15px;
+}
+
+.service__icon {
+    width: 53px;
+    height: 53px;
+    margin-bottom: 20px;
+}
+
+.dishes {
+    background: url("../img/dishes.jpg");
+    background-repeat: no-repeat !important;
+    height: 50vh;
+    background-position: 0px;
+}
+
+.dishes__title {
+    color: transparent;
+}
+
+.menu-meals {
+    padding: 120px 0;
+}
+
+.menu-meals__title {
+    @include bold-font;
+    font-size: 62px;
+    text-align: center;
+    margin-top: 0;
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+.menu-meals__uptitle {
+    @include hand-font;
+    font-size: 34px;
+    display: block;
+    text-align: center;
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}
+
+.menu-meals-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 100px;
+    @media (max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+#uvod {
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.menu-meals__wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+    // flex-direction: column;
+}
+
+.menu-meals__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @media (max-width: 768px) {
+         width: 80%;
+     }
+}
+
+.menu-meals__item hr {
+    border-top: 1px dashed $light-black;
+    width: 30%;
+    margin: 15px;
+}
+
+.menu-meals__item:hover {
+    transition: .2s;
+    color: $gold;
+    // nefacha to 
+}
+
+.meal__headline {
+    @include bold-font;
+    font-size: 22px;
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
+}
+
+.meal__number {
+    @include bold-font;
+    font-size: 22px;
+}
+
+.meals__title {
+    font-size: 28px;
+    @include bold-font;
+    @media (max-width: 600px) {
+        font-size: 24px;
+    }
+}
+
+.meat {
+    background: url("");
+}
+
+.meat__headline {
+    color: transparent;
+}
+
+.left {
+    margin-right: 75px;
+}
+
+.wine {
+    background: url("../img/wine-img.jpg");
+    height: 400px;
+}
+
+.wine__headline {
+    color: transparent;
+}
+
+.drinks {
+    padding: 120px 0;
+}
+
+.drinks-item {
+    display: table;
+    width: 100%;
+}
+
+.drinks__img {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+    vertical-align: middle; 
+}
+
+.drink__picture {
+    width: 100%;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.drinks__text {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.drinks__title {
+    font-size: 62px;
+    @include bold-font;
+    text-align: center;
+    margin-top: 0;
+    @media (max-width: 768px) {
+        font-size: 40px;
+        margin-bottom: 80px;
+    }
+}
+
+.drinks__headline {
+    margin-left: 80px;
+    font-size: 32px;
+    @include bold-font;
+    @media (max-width: 768px) {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 600px) {
+        margin-left: 25px;
+        font-size: 15px;
+    }
+}
+
+.drinks__underheadline {
+    font-size: 28px;
+    @include normal-font;
+    margin-left: 50px;
+    display: block;
+    @media (max-width: 768px) {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 600px) {
+        margin-left: 25px;
+        font-size: 14px;
+    }
+}
+
+.footer {
+    padding: 120px 0 0 0;
+    background-color: $light-black;
+    color: $white;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.footer__hr {
+    height: 100px;
+    border: 1px solid $shadow-black;
+    margin: 20px 0;    
+}
+
+.footer-text {
+    padding: 80px 0;
+}
+
+.footer-text hr {
+    border: 1px solid $shadow-black;
+}
+
+.footer__logo {
+    @include bold-font;
+    font-size: 50px;
+    text-align: center;
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+.footer__headline {
+    @include bold-font;
+    font-size: 32px;
+    text-align: center;
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}
+
+.footer__underheadline {
+    @include normal-font;
+    text-align: center;
+    line-height: 30px;
+}
+
+.hand__hr {
+    border: 1px solid $shadow-black;
+}
+
+.footer__hand-headline {
+    @include hand-font;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.under__hand {
+    margin-top: 25px;
+    display: block;
+}
+
+.footer__name {
+    @include bold-font;
+    font-size: 20px;
+}
+
+.footer__link {
+    text-decoration: none;
+    display: block;
+    color: $white;
+}

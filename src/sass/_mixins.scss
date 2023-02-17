@@ -1,0 +1,15 @@
+@import "vars.scss";
+@mixin normal-font {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+@mixin bold-font {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+@mixin hand-font {
+    font-family: 'Pinyon Script', cursive;
+    color: $gold;
+}
